@@ -6,6 +6,10 @@ html{
   background: blue;
 }
 
+input{
+  color: black;
+}
+
 #issue{
 display: block;
 }

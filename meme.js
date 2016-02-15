@@ -36,15 +36,21 @@ console.log(memeImage);
 memeImage.src = 'newbern.png';
 
 
-       var savebutton = document.getElementById('saveImage');
+
+function download() {
+    var dt = canvas.toDataURL('image/jpeg');
+    this.href = dt;
+};
+document.getElementById('saveImage').addEventListener('click', download, false);
+  /*     var savebutton = document.getElementById('saveImage');
        /*img.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA'+
        'AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO'+
        '9TXL0Y4OHwAAAABJRU5ErkJggg==';*/
-       savebutton.onclick = function () {
+       /*savebutton.onclick = function () {
          var dataURL = canvas.toDataURL('image/octet-stream');
 
            window.location.href = dataURL;//img.src.replace('image/png', 'image/octet-stream');
-       };
+       };*/
 
 
 function reset(e){
