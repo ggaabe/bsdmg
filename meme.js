@@ -10,7 +10,7 @@ imageLoader2.addEventListener('change', handleImage2, false);
 topicLoader.addEventListener('change', topicHandler, false);
 
 //bernieText.addEventListener('change', bernietextHandler, false);
-hillaryText.addEventListener('change', hillarytextHandler, false);
+//hillaryText.addEventListener('change', hillarytextHandler, false);
 
 document.getElementById('submitbern').addEventListener('click', bernietextHandler, false);
 document.getElementById('submithill').addEventListener('click', hillarytextHandler, false);
@@ -33,12 +33,12 @@ canvas.height = memeImage.height;
 ctx.drawImage(memeImage, 0, 0);
 console.log(memeImage);
 }
-memeImage.src = 'newbern.png';
+memeImage.src = 'newbern2.png';
 
 
 
 function download() {
-    var dt = canvas.toDataURL('image/jpeg');
+    var dt = canvas.toDataURL('image/png');
     this.href = dt;
 };
 document.getElementById('saveImage').addEventListener('click', download, false);
