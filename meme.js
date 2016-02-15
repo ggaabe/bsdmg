@@ -16,7 +16,7 @@ document.getElementById('submitbern').addEventListener('click', bernietextHandle
 document.getElementById('submithill').addEventListener('click', hillarytextHandler, false);
 document.getElementById('reset').addEventListener('click', reset, false);
 document.getElementById('submittopic').addEventListener('click', topicHandler, false);
-document.getElementById('saveImage').addEventListener('click', save, false);
+//document.getElementById('saveImage').addEventListener('click', save, false);
 
 
 var canvas = document.getElementById('imageCanvas');
@@ -35,17 +35,17 @@ console.log(memeImage);
 }
 memeImage.src = 'newbern.png';
 
-function save(){
-       var button = document.getElementById('saveImage');
-       var dataURL = canvas.toDataURL('image/octet-stream');
+
+       var savebutton = document.getElementById('saveImage');
        /*img.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA'+
        'AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO'+
        '9TXL0Y4OHwAAAABJRU5ErkJggg==';*/
-       button.onclick = function () {
+       savebutton.onclick = function () {
+         var dataURL = canvas.toDataURL('image/octet-stream');
+
            window.location.href = dataURL;//img.src.replace('image/png', 'image/octet-stream');
        };
 
-   };
 
 function reset(e){
   var memeImage = new Image();
