@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <label>Image File:</label><br/>
+    <input type="file" id="imageLoader" name="imageLoader"/>
+    <canvas id="imageCanvas"></canvas>
+  </body>
+</html>

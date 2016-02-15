@@ -1,0 +1,58 @@
+var imageLoader = document.getElementById('imageLoader');
+var imageLoader2 = document.getElementById('imageLoader2');
+var topicLoader = document.getElementById('topic');
+var formLoader = document.getElementById('memeform');
+//formLoader = addEventListener('submit', handleForm, false);
+imageLoader.addEventListener('change', handleImage, false);
+imageLoader.addEventListener('change', handleImage1, false);
+
+var canvas = document.getElementById('imageCanvas');
+var ctx = canvas.getContext('2d');
+
+
+var memeImage = new Image();
+
+memeImage.onload = function(){
+    //memeImage.src = 'meme1.png';
+canvas.width = memeImage.width;
+canvas.height = memeImage.height;
+
+ctx.drawImage(memeImage, 0, 0);
+console.log(memeImage);
+}
+memeImage.src = 'meme1.png';
+function handleImage(e){
+    var reader = new FileReader();
+    reader.onload = function(event){
+        var img = new Image();
+        img.onload = function(){
+	    //canvas.width = img.width;
+            //canvas.height = img.height;
+	    //img.width = 228;
+	    //img.height = 128;
+	   
+            ctx.drawImage(img,59,416, 228, 128);
+        }
+	//var bernieImage = document.getElementById('imageLoader');
+        img.src = event.target.result;
+    }
+    reader.readAsDataURL(e.target.files[0]);
+}
+
+function handleImage2(e){
+var reader = new FileReader();
+reader.onload = function(event){
+    var img = new Image();
+    img.onload = function(){                                                 
+	ctx.drawImage(img,259,416, 228, 128);
+    }
+    var bernieImage = document.getElementById('imageLoader');
+    img.src = event.target.result;
+}
+    reader.readAsDataURL(e.target.files[0]);
+}
+
+
+handleForm(){
+    handleImage();
+}
