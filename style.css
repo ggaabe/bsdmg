@@ -1,5 +1,9 @@
 body {
 background: blue;
+color: white;
+}
+html{
+  background: blue;
 }
 
 #issue{
@@ -14,8 +18,20 @@ display: inline-block;
 display: inline-block;
 }
 
+canvas {
+  background-color: blue;
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  max-height: 580px;
+}
+
 .meme{
+/*
 width: 80%;
 margin-left: auto;
 margin-right: auto;
+*/
+background: blue;
+color: white;
 }

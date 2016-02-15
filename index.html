@@ -1,34 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="stylesheet" type="text/css" href="style.css"/>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
 
   <body>
-    <h1>Bernie Sanders Dank Meme Generator</h1>
-   <div class="meme">
-    <form id="memeform">
+   <div class="meme container">
+     <h1>Bernie Sanders Dank Meme Generator</h1>
      <div id="issue">
-      <h2>Issue:</h2>
-     <input type="text" id="topic" name="topic"/>
+        <h2>Issue:</h2>
+       <input type="text" id="topic" name="topic"/>
+       <button id="submittopic" class="btn btn-primary">Enter</button>
     </div>
      <div id="bernieposition">
-     <h2>Bernie's Position</h2>
-     <input type="text" id="bernietext" name="bernietext"/>
-     <button id="submitbern"></button>
-     <h2> OR upload an image</h2>
-    <input type="file" id="imageLoader" name="imageLoader"/>
+       <h2>Bernie's Position</h2>
+       <input type="text" id="bernietext" name="bernietext"/>
+     <button id="submitbern" class="btn btn-primary">Enter</button>
+       <h2> OR upload an image</h2>
+      <input type="file" class="btn btn-primary" id="imageLoader" name="imageLoader"/>
     </div>
     <div id="hillaryposition">
      <h2>Hillary's Position</h2>
-     <input type="text"id="hillarytext" name="hillarytext"/>
-     <h2> OR upload an image</h2>
-    <input type="file" id="imageLoader2" name="imageLoader2"/>
+       <input type="text"id="hillarytext" name="hillarytext"/>
+       <button id="submithill" class="btn btn-primary">Enter</button>
+       <h2> OR upload an image</h2>
+    <input type="file" id="imageLoader2" class="btn btn-primary" name="imageLoader2"/>
     </div>
-    </form>
+    <br />
+    <button id="saveImage" class="btn btn-success">Save Image</button>
+    <br />
+    <br />
+    <br />
     <!--<button type="submit" form="memeform" value="Submit">Submit</button>-->
     <canvas id="imageCanvas"></canvas>
+    <br />
+    <button id="reset" class="btn btn-danger">RESET!</button>
+
     </div>
-    <script src="meme.js"></script> 
+    <script src="meme.js"></script>
  </body>
 </html>
