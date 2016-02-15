@@ -1,13 +1,13 @@
 var imageLoader = document.getElementById('imageLoader');
 var imageLoader2 = document.getElementById('imageLoader2');
-var topicLoader = document.getElementById('topic');
+//var topicLoader = document.getElementById('topic');
 var formLoader = document.getElementById('memeform');
 var bernieText = document.getElementById('bernietext');
 var hillaryText = document.getElementById('hillarytext');
 //formLoader = addEventListener('submit', handleForm, false);
 imageLoader.addEventListener('change', handleImage, false);
 imageLoader2.addEventListener('change', handleImage2, false);
-topicLoader.addEventListener('change', topicHandler, false);
+//topicLoader.addEventListener('change', topicHandler, false);
 
 //bernieText.addEventListener('change', bernietextHandler, false);
 //hillaryText.addEventListener('change', hillarytextHandler, false);
@@ -173,7 +173,7 @@ function topicHandler(e){
     var text = topic.value;
     ctx.fillStyle = "black";
     ctx.font="24px Helvetica";
-    ctx.fillText(text,160,170);
+    ctx.fillText(text,160,165);
 
 }
 
