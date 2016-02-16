@@ -173,7 +173,7 @@ function topicHandler(e){
     var text = topic.value;
     ctx.fillStyle = "black";
     ctx.font="24px Helvetica";
-    ctx.fillText(text,160,165);
+    ctx.fillText(text,140,165);
 
 }
 
